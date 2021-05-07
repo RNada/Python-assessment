@@ -36,7 +36,31 @@
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-	return ""
+
+string1 = input("Enter first input: ")
+string2 = input("Enter second input: ")
+
+
+count1 = 0
+count2 = 0
+
+for i in string1:
+      count1 = count1 + 1
+
+for j in string2:
+      count2 = count2 + 1
+
+if (count1 < count2):
+      print ("Longer string is:")
+      print (string2)
+
+elif (count1 == count2):
+      print (string1, string2)
+else:
+      print ("Longer string is:")
+      print (string1)
+
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -79,7 +103,25 @@ def two(arg1):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def three(input):
-    return 0
+
+
+def isVowel(ch): 
+	if(ch=='a'  or ch=='e' or ch=='i' or ch=='o' or ch=='u'):
+		return True
+	else:
+		return False
+
+
+def countVowel(s) :
+	count =0
+
+	for i in str:
+		if(isVowel(i) == True):
+			count += 1 
+	return count
+	
+str = "'hEelLoooO'".lower()
+print("Total vowels are: ", countVowel(str))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -122,7 +164,13 @@ def four(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def five(input):
-	return 1
+
+n = input("Enter a number: ")
+factorial = 1
+if int(n) >= 1:
+    for i in range (1, int(n)+1):
+        factorial = factorial * i
+print("Factorail of ",n , " is : ",factorial)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
